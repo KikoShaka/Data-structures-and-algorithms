@@ -4,4 +4,12 @@ bool checkIfPangram(string sentence) {
         for(char ch='a';ch<='z';++ch){
             alphabet.insert(ch);
         }
+        
+        for(char ch: sentence){
+            if(isalpha(ch)){
+                alphabet.erase(tolower(ch));
+            }
+        }
+        return alphabet.empty();
+    }
 }
