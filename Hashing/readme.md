@@ -8,40 +8,40 @@ Welcome to the Hashing in C++ folder within the Data Structures and Algorithms (
 
 Hashing is a fundamental concept in computer science, providing efficient data retrieval through the transformation of data into fixed-size values. In this folder, we focus on implementing hashing algorithms in C++.
 
-## Implemented Hashing Algorithms
+## Using C++ Standard Library (std::unordered_map)
 
-// Declaration: C++ supports multiple implementations, but we will be using
-// std::unordered_map. Specify the data type of the keys and values.
-unordered_map<int, int> hashMap;
+C++ provides a powerful standard library container for hashing known as `std::unordered_map`. It is a key-value pair storage that allows for efficient lookups.
 
-// If you want to initialize it with some key value pairs, use the following syntax:
-unordered_map<int, int> hashMap = {{1, 2}, {5, 3}, {7, 2}};
+Here's a quick guide on using `std::unordered_map`:
 
-// Checking if a key exists: use the following syntax:
-hashMap.find(1) != hashMap.end(); // true
-hashMap.find(9) != hashMap.end(); // false
+```cpp
+// Declare an unordered_map. Specify the data type of the keys and values.
+std::unordered_map<int, int> hashMap;
 
-// Accessing a value given a key: use square brackets, similar to an array.
-hashMap[5]; // 3
+// Initialize with key-value pairs.
+std::unordered_map<int, int> hashMap = {{1, 2}, {5, 3}, {7, 2}};
 
-// Note: if you were to access a key that does not exist, it creates the key with a default value of 0.
-hashMap[342]; // 0
+// Check if a key exists.
+if (hashMap.find(1) != hashMap.end()) {
+    // Key exists.
+    // Accessing a value given a key: use square brackets, similar to an array.
+    int value = hashMap[1];
+    std::cout << "Value for key 1: " << value << std::endl;
+} else {
+    // Key does not exist.
+    std::cout << "Key 1 not found." << std::endl;
+}
 
-// Adding or updating a key: use square brackets, similar to an array.
-// If the key already exists, the value will be updated
+// Iterate over the key-value pairs.
+for (const auto& pair : hashMap) {
+    std::cout << "Key: " << pair.first << ", Value: " << pair.second << std::endl;
+}
+
+// Add or update a key.
 hashMap[5] = 6;
 
-// If the key doesn't exist yet, the key value pair will be inserted
-hashMap[9] = 15;
+// Delete a key.
+hashMap.erase(7);
 
-// Deleting a key: use the .erase() method.
-hashMap.erase(9);
-
-// Get size
-hashMap.size(); // 3
-
-// Iterate over the key value pairs: use the following code.
-// .first gets the key and .second gets the value.
-for (auto const& pair: hashMap) {
-    cout << pair.first << " " << pair.second << endl;
-}
+// Get the size of the unordered_map.
+std::cout << "Size of the unordered_map: " << hashMap.size() << std::endl;
