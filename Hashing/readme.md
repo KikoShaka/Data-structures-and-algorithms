@@ -6,7 +6,7 @@ Welcome to the Hashing in C++ folder within the Data Structures and Algorithms (
 
 ## Introduction
 
-Hashing is a fundamental concept in computer science, providing efficient data retrieval through the transformation of data into fixed-size values. In this folder, we focus on implementing hashing algorithms in C++.
+Hashing is a fundamental concept in computer science.The focus here is on implementing hashing algorithms in C++.
 
 ## Using C++ Standard Library (std::unordered_map)
 
