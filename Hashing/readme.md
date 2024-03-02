@@ -1,5 +1,3 @@
-**README.md**
-
 ## Using C++ Standard Library (std::unordered_map)
 
 Quick guide on using `std::unordered_map`:
