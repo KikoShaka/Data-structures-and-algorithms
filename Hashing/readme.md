@@ -1,18 +1,8 @@
 **README.md**
 
-# Hashing in C++
-
-Welcome to the Hashing in C++ folder within the Data Structures and Algorithms (DSA) Repository! This section is dedicated to exploring and implementing various hashing algorithms using the C++ programming language.
-
-## Introduction
-
-Hashing is a fundamental concept in computer science.The focus here is on implementing hashing algorithms in C++.
-
 ## Using C++ Standard Library (std::unordered_map)
 
-C++ provides a powerful standard library container for hashing known as `std::unordered_map`. It is a key-value pair storage that allows for efficient lookups.
-
-Here's a quick guide on using `std::unordered_map`:
+Quick guide on using `std::unordered_map`:
 
 ```cpp
 // Declare an unordered_map. Specify the data type of the keys and values.
